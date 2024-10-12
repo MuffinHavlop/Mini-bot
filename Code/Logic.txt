@@ -1,0 +1,31 @@
+const int enablePin1 = 18; 
+const int enablePin2 = 19; 
+bool motor1Active = false;
+bool motor2Active = false;
+
+Two Boolean variables are picked for this logic. 
+
+if (RemoteXY.button_01 == 1) {
+    motor1Active = true;
+    digitalWrite(IN1, HIGH);
+    digitalWrite(IN2, LOW);
+  } else if (RemoteXY.button_02 == 1) {
+    motor1Active = true;
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, HIGH);
+  } else {
+    motor1Active = false;
+  }
+  if (RemoteXY.button_03 == 1) {
+    motor2Active = true;
+    digitalWrite(IN3, HIGH);
+    digitalWrite(IN4, LOW);
+  } else if (RemoteXY.button_04 == 1) {
+    motor2Active = true;
+    digitalWrite(IN3, LOW);
+    digitalWrite(IN4, HIGH);
+  } else {
+    motor2Active = false;
+  }
+
+The code is use for controlling the Robot by control 2 wheels independently, a wheel will only rotate if a certain button is pressed. The "RemoteXY.button_0X" is the corresponding buttons to alternate the Boolean variables and the constants enablePin1_2 are used to addionally help the logic to function. 

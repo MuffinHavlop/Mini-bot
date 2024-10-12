@@ -1,0 +1,24 @@
+The robot is controlled using RemoteXY, an app available on Android and ios used to control Arduino-like projects, including esp32's Bluetooth capability.
+
+The following code is what made controlling possible: 
+
+#define REMOTEXY_MODE__ESP32CORE_BLUETOOTH
+#include <BluetoothSerial.h>
+#define REMOTEXY_BLUETOOTH_NAME "NATUS"
+#include <RemoteXY.h>
+#pragma pack(push, 1)  
+uint8_t RemoteXY_CONF[] =  
+  { 255,4,0,0,0,70,0,18,0,0,0,31,1,106,200,1,1,4,0,1,
+  64,29,36,36,4,63,31,70,111,114,119,97,114,100,0,1,8,29,36,36,
+  4,63,31,66,97,99,107,0,1,61,118,38,38,4,12,31,70,111,114,119,
+  97,114,100,0,1,6,118,39,39,4,12,31,66,97,99,107,0 };
+struct {
+  uint8_t button_01;
+  uint8_t button_02; 
+  uint8_t button_03; 
+  uint8_t button_04; 
+  uint8_t connect_flag; 
+} RemoteXY;   
+#pragma pack(pop)
+
+The control buttons can be edited on RemoteXY website and from there copy a new code into the previous one's place. 
