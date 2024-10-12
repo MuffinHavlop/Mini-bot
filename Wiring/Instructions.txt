@@ -1,0 +1,17 @@
+The robot is wired according to the following diagram: 
+
+For power: 
+VS -> 12V
+GND -> Batteries' tray GND
+GND -> GND (near 3.3V)
+VSS -> VIN 
+
+For controlling motors: 
+ENA -> D18
+ENB -> D19
+IN1 -> D4
+IN2 -> D5
+IN3 -> D12
+IN3 -> D13
+
+Notice: Use additional foam or breadboard or electric tape to cover the remaining exposing pins, if metal contact is made than the esp32 can be shorted.
