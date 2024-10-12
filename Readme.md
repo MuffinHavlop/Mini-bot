@@ -4,6 +4,7 @@ Robot Specs:
 MCU: esp32-wrover-module
 //Motordriver: L298N module
 //Battery: dual ICR 18650 4000mAh 3.7V
+//RC toy motors 
 
 Notice that there will be additional jumper wires and batter tray to hold the batter in place. 
 
