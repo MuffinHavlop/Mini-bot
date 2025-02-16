@@ -21,4 +21,4 @@ struct {
 } RemoteXY;   
 #pragma pack(pop)
 
-The control buttons can be edited on RemoteXY website and from there copy a new code into the previous one's place. 
+The control buttons can be edited on RemoteXY website: (https://remotexy.com/en/editor/) and from there copy a new code into the previous one's place. 
